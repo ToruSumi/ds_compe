@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "ds-compe"
+version = "0.1.0"
+description = ""
+authors = ["Laplusdestiny <prayonshootingstars@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">3.10,<=3.12"
+pandas = "*"
+plotly = "*"
+tqdm = "*"
+kaleido = "0.2.1"
+kaggle = "*"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "*"
+ipykernel = "*"
+ipywidgets = "*"
+nbformat = "*"
+
+
+[tool.poetry.group.ml.dependencies]
+pycaret = "*"
+lightgbm = "*"
+mlflow = "*"
+optuna = "*"
+scikit-optimize = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
