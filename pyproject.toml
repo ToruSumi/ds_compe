@@ -4,6 +4,7 @@ version = "0.1.0"
 description = ""
 authors = ["Laplusdestiny <prayonshootingstars@gmail.com>"]
 readme = "README.md"
+package-mode = false
 
 [tool.poetry.dependencies]
 python = ">3.10,<=3.12"
@@ -26,6 +27,10 @@ lightgbm = "*"
 mlflow = "*"
 optuna = "*"
 scikit-optimize = "*"
+
+
+[tool.poetry.group.stubs.dependencies]
+pandas-stubs = "*"
 
 [build-system]
 requires = ["poetry-core"]
