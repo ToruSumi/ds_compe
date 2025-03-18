@@ -1,32 +1,38 @@
-[tool.poetry]
+[project]
 name = "ds-compe"
 version = "0.1.0"
-description = ""
-authors = ["Laplusdestiny <prayonshootingstars@gmail.com>"]
+description = "Add your description here"
+authors = [
+    { name = "Sumi Toru", email = "sumi.toru@jp.panasonic.com" }
+]
+dependencies = [
+    "pandas>=2.0",
+    "plotly>=5.0",
+    "tqdm>=4.50",
+    "kaggle>=1.5",
+    "pycaret>=3.0",
+    "lightgbm>=4.0",
+    "mlflow>=2.20",
+    "optuna>=4.0",
+    "kaleido==0.2.1",
+]
 readme = "README.md"
-
-[tool.poetry.dependencies]
-python = ">3.10,<=3.12"
-pandas = "*"
-plotly = "*"
-tqdm = "*"
-kaleido = "0.2.1"
-kaggle = "*"
-
-[tool.poetry.group.dev.dependencies]
-ruff = "*"
-ipykernel = "*"
-ipywidgets = "*"
-nbformat = "*"
-
-
-[tool.poetry.group.ml.dependencies]
-pycaret = "*"
-lightgbm = "*"
-mlflow = "*"
-optuna = "*"
-scikit-optimize = "*"
+requires-python = ">= 3.8"
 
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = [
+    "ipykernel>=6.20",
+    "ipywidgets>=8.0",
+    "nbformat>=5.0",
+]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/ds_compe"]
