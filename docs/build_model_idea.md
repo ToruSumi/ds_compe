@@ -26,6 +26,7 @@ Table of Contents
 
 - early_stoppingを使う場合も、各モデルごとにepoch数が異なるため、CVを使うことで、epoch数を調整することができる
 - 時系列の場合は、時系列に沿ったCVを行うことで、未来のデータに対しても適切な評価を行うことができる
+- 分割数は多いほうが過学習を防ぐことができる
 
 ## アンサンブル
 
@@ -36,6 +37,7 @@ Table of Contents
 - データセットをランダムに分割して、それぞれのモデルに学習させる
   - CVのseedを変える
 - モデルの種類を変える
+  - カテゴリーが多いデータであれば、catboostなど
 - ハイパーパラメータを変える
 - 特徴量を変える
 
@@ -46,8 +48,11 @@ Table of Contents
 - LightGBM
   - learning_rate
   - num_leaves
+  - feature_fraction
   - feature_fraction_bynode
   - min_data_in_leaf
+- catboost
+  - rsm
 
 使用できるライブラリとしては以下のようなものがある
 
